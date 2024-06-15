@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Ingredients and Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="site-title">Rekomendasi Produk Perawatan Kulit</h1>
+        <nav>
+            <button onclick="changeLanguage('id')">Bahasa Indonesia</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2 id="about-title">Tentang Kami</h2>
+            <p id="about-description">Kami membantu Anda menemukan bahan perawatan kulit yang paling sesuai dengan jenis dan masalah kulit Anda.</p>
+        </section>
+        <section id="quiz">
+            <h2 id="quiz-title">Kuis Perawatan Kulit</h2>
+            <form id="skincare-quiz">
+                <label for="name" id="label-name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="whatsapp" id="label-whatsapp">Nomor WhatsApp:</label>
+                <input type="text" id="whatsapp" name="whatsapp" required>
+                
+                <label for="age" id="label-age">Usia:</label>
+                <input type="number" id="age" name="age" required>
+                
+                <label for="skin-type" id="label-skin-type">Jenis Kulit:</label>
+                <select id="skin-type" name="skin-type" required>
+                    <option value="normal">Normal</option>
+                    <option value="dry">Kering</option>
+                    <option value="oily">Berminyak</option>
+                    <option value="combination">Kombinasi</option>
+                </select>
+                
+                <label for="skin-concerns" id="label-skin-concerns">Masalah Kulit:</label>
+                <select id="skin-concerns" name="skin-concerns" multiple required>
+                    <option value="acne">Jerawat</option>
+                    <option value="comedones">Komedo</option>
+                    <option value="dark-spot">Bercak Gelap</option>
+                    <option value="wrinkles">Keriput</option>
+                    <option value="redness">Kemerahan</option>
+                    <option value="dull">Kusam</option>
+                    <option value="texture">Tekstur</option>
+                    <option value="big-pores">Pori-pori Besar</option>
+                </select>
+                
+                <button type="submit" id="submit-button">Kirim</button>
+            </form>
+        </section>
+        <section id="recommendations">
+            <h2 id="recommendations-title">Rekomendasi Produk</h2>
+            <div id="product-list"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
